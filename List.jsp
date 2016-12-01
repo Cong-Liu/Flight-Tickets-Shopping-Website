@@ -9,230 +9,157 @@
 			<div class="faqs-top-grids">
 				<div class="product-grids">
 					<div class="col-md-3 product-left">
-						<div class="h-class">
-							<h5>Hotel Class</h5>
+						<div class="h-class p-day">
+							<h5>Stops</h5>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox">
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="starTextLabel">5 Stars (18)</span>
+									<input type="checkbox" checked="checked" disabled="disabled">
+									<span class="p-day-grid" title="Currently only support none-stop flights">Nonestop</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox" checked="checked" data-track="HOT:SR:StarRating:5Star">
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="starTextLabel">4 Stars (30)</span>
+									<input type="checkbox" disabled="disabled">
+									<span class="p-day-grid" title="Currently only support none-stop flights">1 Stop</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox">
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="starTextLabel">3 Stars (106)</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="checkbox">
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="starTextLabel">2 Stars (78)</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="checkbox">
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-									<span class="starTextLabel">1 Stars (10)</span>
+									<input type="checkbox" disabled="disabled">
+									<span class="p-day-grid" title="Currently only support none-stop flights">2+ Stops</span>
 								</label>
 							</div>
 						</div>
 						<div class="h-class p-day">
-							<h5>Price per day</h5>
+							<h5>Airlines Included</h5>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox" checked="checked" data-track="HOT:SR:StarRating:5Star">
-									<span class="p-day-grid">Less than $100 (76)</span>
+									<input type="checkbox" name="chkAirline" value="UA">
+									<span class="p-day-grid">United</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox">
-									<span class="p-day-grid">$100 to $200 (132)</span>
+									<input type="checkbox" name="chkAirline" value="AA">
+									<span class="p-day-grid">American Airlines</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox">
-									<span class="p-day-grid">$300 to $300 (223)</span>
+									<input type="checkbox" name="chkAirline" value="DL">
+									<span class="p-day-grid">Delta</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox">
-									<span class="p-day-grid">$300 to $400 (84)</span>
+									<input type="checkbox" name="chkAirline" value="NK">
+									<span class="p-day-grid">Spirit Airlines</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox">
-									<span class="p-day-grid">$500 to $600 (23)</span>
-								</label>
-							</div>
-						</div>
-						<div class="h-class">
-							<h5>Area</h5>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId" checked="checked" data-track="HOT:SR:Area">
-									<span class="p-day-grid">London</span>
+									<input type="checkbox" name="chkAirline" value="F9">
+									<span class="p-day-grid">Frontier Airlines</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">Newyork</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">New Zealand</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">Los Angeles</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">Sydney</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">Agra</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">Greece</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">Singapore</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="radio" name="hideRegionId"  data-track="HOT:SR:Area">
-									<span class="p-day-grid">Paris</span>
+									<input type="checkbox" name="chkAirline" value="VX">
+									<span class="p-day-grid">Virgin America</span>
 								</label>
 							</div>
 						</div>
 						<div class="h-class p-day">
-							<h5>Accommodation Type</h5>
+							<h5>Departure Time</h5>
 							<div class="hotel-price">
 								<label class="check">
-									<input type="checkbox" checked="checked" data-track="HOT:SR:StarRating:5Star">
-									<span class="p-day-grid">Hotel resort (67)</span>
+									<input type="checkbox">
+									<span class="p-day-grid">Early Morning</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
 									<input type="checkbox">
-									<span class="p-day-grid">Hotel (84)</span>
+									<span class="p-day-grid">Morning</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
 									<input type="checkbox">
-									<span class="p-day-grid">Guest house (24)</span>
+									<span class="p-day-grid">Afternoon</span>
 								</label>
 							</div>
 							<div class="hotel-price">
 								<label class="check">
 									<input type="checkbox">
-									<span class="p-day-grid">Apartment (34)</span>
-								</label>
-							</div>
-							<div class="hotel-price">
-								<label class="check">
-									<input type="checkbox">
-									<span class="p-day-grid">Country House (32)</span>
+									<span class="p-day-grid">Evening</span>
 								</label>
 							</div>
 						</div>
+						<div class="h-class">
+							<h5 title="Flight score reflects the duration of the flight the type of aircraft, and the quality of amenities the flight offers.">Rating</h5>
+							<div class="hotel-price">
+								<label class="check">
+									<input type="checkbox">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</label>
+							</div>
+							<div class="hotel-price">
+								<label class="check">
+									<input type="checkbox">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</label>
+							</div>
+							<div class="hotel-price">
+								<label class="check">
+									<input type="checkbox">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</label>
+							</div>
+							<div class="hotel-price">
+								<label class="check">
+									<input type="checkbox">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</label>
+							</div>
+							<div class="hotel-price">
+								<label class="check">
+									<input type="checkbox">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								</label>
+							</div>
+						</div>
+					
 					</div>
 					<div class="col-md-9 product-right">
 						<div class="product-right-grids">
 							<div class="product-right-top">
 								<div class="p-left">
 									<div class="p-right-img">
-										<a href="p-single.html"> </a>
+										<a href="#" style="background-image: url('images/Airlines/UA.jpg')"> </a>
 									</div>
 								</div>
 								<div class="p-right">
 									<div class="col-md-6 p-right-left">
-										<a href="p-single.html">Lorem ipsum dolor sit amet</a>
-										<div class="p-right-price">
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-										</div>
-										<p>Vestibulum molestie id orci eget vulputate</p>
-										<p class="p-call">+1 234 567 890</p>
+										<a>12:30p - 4:25p</a>
+										<p>United</p>
+										<p class="p-call">13h 55m</p>
 									</div>
 									<div class="col-md-6 p-right-right">
 										<h6>Rating : 4.1/5</h6>
-										<p>(123) Views</p>
-										<span class="p-offer">$140</span><span class="p-last-price">$230</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>	
-						</div><div class="product-right-grids">
-							<div class="product-right-top">
-								<div class="p-left">
-									<div class="p-right-img p-right-img1">
-										<a href="p-single.html"> </a>
-									</div>
-								</div>
-								<div class="p-right">
-									<div class="col-md-6 p-right-left">
-										<a href="p-single.html">Lorem ipsum dolor sit amet</a>
-										<div class="p-right-price">
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-										</div>
-										<p>Vestibulum molestie id orci eget vulputate</p>
-										<p class="p-call">+1 234 567 890</p>
-									</div>
-									<div class="col-md-6 p-right-right">
-										<h6>Rating : 4.1/5</h6>
-										<p>(123) Views</p>
-										<span class="p-offer">$240</span><span class="p-last-price">$430</span>
+										<p>ORD - PEK, UA850</p>
+										<span class="p-offer">$1278.90</span>
+										<p><a class="best-btn" href="booking.html">Select</a></p>
 									</div>
 									<div class="clearfix"> </div>
 								</div>
@@ -242,113 +169,21 @@
 						<div class="product-right-grids">
 							<div class="product-right-top">
 								<div class="p-left">
-									<div class="p-right-img p-right-img2">
-										<a href="p-single.html"> </a>
+									<div class="p-right-img">
+										<a href="#" style="background-image: url('images/Airlines/VX.jpg')"> </a>
 									</div>
 								</div>
 								<div class="p-right">
 									<div class="col-md-6 p-right-left">
-										<a href="p-single.html">Lorem ipsum dolor sit amet</a>
-										<div class="p-right-price">
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-										</div>
-										<p>Vestibulum molestie id orci eget vulputate</p>
-										<p class="p-call">+1 234 567 890</p>
+										<a>6:15p - 8:50p</a>
+										<p>Virgin America</p>
+										<p class="p-call">4h 35m</p>
 									</div>
 									<div class="col-md-6 p-right-right">
 										<h6>Rating : 4.1/5</h6>
-										<p>(123) Views</p>
-										<span class="p-offer">$120</span><span class="p-last-price">$310</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>	
-						</div>
-						<div class="product-right-grids">
-							<div class="product-right-top">
-								<div class="p-left">
-									<div class="p-right-img p-right-img3">
-										<a href="p-single.html"> </a>
-									</div>
-								</div>
-								<div class="p-right">
-									<div class="col-md-6 p-right-left">
-										<a href="p-single.html">Lorem ipsum dolor sit amet</a>
-										<div class="p-right-price">
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-										</div>
-										<p>Vestibulum molestie id orci eget vulputate</p>
-										<p class="p-call">+1 234 567 890</p>
-									</div>
-									<div class="col-md-6 p-right-right">
-										<h6>Rating : 4.1/5</h6>
-										<p>(123) Views</p>
-										<span class="p-offer">$140</span><span class="p-last-price">$230</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>	
-						</div>
-						<div class="product-right-grids">
-							<div class="product-right-top">
-								<div class="p-left">
-									<div class="p-right-img p-right-img1">
-										<a href="p-single.html"> </a>
-									</div>
-								</div>
-								<div class="p-right">
-									<div class="col-md-6 p-right-left">
-										<a href="p-single.html">Lorem ipsum dolor sit amet</a>
-										<div class="p-right-price">
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-										</div>
-										<p>Vestibulum molestie id orci eget vulputate</p>
-										<p class="p-call">+1 234 567 890</p>
-									</div>
-									<div class="col-md-6 p-right-right">
-										<h6>Rating : 4.1/5</h6>
-										<p>(123) Views</p>
-										<span class="p-offer">$380</span><span class="p-last-price">$540</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>	
-						</div>
-						<div class="product-right-grids">
-							<div class="product-right-top">
-								<div class="p-left">
-									<div class="p-right-img p-right-img2">
-										<a href="p-single.html"> </a>
-									</div>
-								</div>
-								<div class="p-right">
-									<div class="col-md-6 p-right-left">
-										<a href="p-single.html">Lorem ipsum dolor sit amet</a>
-										<div class="p-right-price">
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-										</div>
-										<p>Vestibulum molestie id orci eget vulputate</p>
-										<p class="p-call">+1 234 567 890</p>
-									</div>
-									<div class="col-md-6 p-right-right">
-										<h6>Rating : 4.1/5</h6>
-										<p>(123) Views</p>
-										<span class="p-offer">$360</span><span class="p-last-price">$750</span>
+										<p>ORD - LAX, VX230</p>
+										<span class="p-offer">$243.10</span>
+										<p><a class="best-btn" href="booking.html">Select</a></p>
 									</div>
 									<div class="clearfix"> </div>
 								</div>
@@ -363,5 +198,20 @@
 		<!-- //container -->
 	</div>
 <!-- //banner-bottom -->
+
+<script type="text/javascript">
+	//select filtered airline
+	if(location.search.indexOf("?airline=") >= 0) {
+		var code = location.search.substr(9);
+		$("input[name='chkAirline'][value='"+code+"']").attr("checked", true);
+	}
+	
+	//filter search result by airline
+	$("input[name='chkAirline']").click(function(){
+		if(this.checked) location.href = "?airline=" + this.value;
+		else location.href = "?";
+	});
+
+</script>
 
 <%@ include file="Footer.jsp" %>

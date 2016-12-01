@@ -68,8 +68,8 @@
 										<div class="login-grid-left">
 											<fieldset id="body">
 												<fieldset>
-													<label for="email">Email Address</label>
-													<input type="text" name="email" id="email">
+													<label for="email">Username</label>
+													<input type="text" name="username" id="username">
 												</fieldset>
 												<fieldset>
 													<label for="password">Password</label>
@@ -83,14 +83,8 @@
 												<p>OR</p>
 											</div>
 											<div class="social-sits">
-												<div class="facebook-button">
-													<a href="#">Connect with Facebook</a>
-												</div>
-												<div class="chrome-button">
-													<a href="#">Connect with Google</a>
-												</div>
 												<div class="button-bottom">
-													<p>New account? <a href="signup.html">Signup</a></p>
+													<p>New account? <a href="SignUp.jsp">Signup</a></p>
 												</div>
 											</div>
 										</div>

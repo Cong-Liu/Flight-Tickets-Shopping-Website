@@ -1909,17 +1909,17 @@ span.starTextLabel {
 }
 .p-left{
 	float:left;
-	width:30%;
+	width: 12%;
+	padding: 1em 0;
 }
 .p-right{
     float: left;
-    width: 70%;
+    width: 88%;
     padding: 1em 0;
 }
 .p-right-img a{
     background: url(../images/p1.jpg) no-repeat 0px 0px;
-    min-height: 150px;
-    background-size: cover;
+    min-height: 70px;
 	display: block;
 }
 .p-right-img1 a{
