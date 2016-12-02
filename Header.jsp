@@ -26,12 +26,17 @@
 <!--//pop-up-->	
 </head>
 <body>
+	<%@ page import="models.*" %>
+<%
+        // get user from the session
+        models.User user = (models.User) request.getSession().getAttribute("user");
+%>
 	<!--header-->
 	<div class="header">
 		<div class="container">
 			<div class="header-grids">
 				<div class="logo">
-					<h1><a href="index.html"><span>Best</span>Flight</a></h1>
+					<h1><a href="Home.jsp"><span>Best</span>Flight</a></h1>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -39,14 +44,10 @@
 				<div class="top-nav">
 					<span class="menu"><img src="images/menu.png" alt="" /></span>
 					<ul class="nav1">
-						<li class="active"><a href="index.html">Flights</a></li>
-						<li><a href="hotels.html">Hotels</a></li>
-						<li><a href="holidays.html">Holidays</a></li>
-						<li><a href="flights-hotels.html">Flight+Hotel</a></li>
-						<li><a href="bus.html">Bus</a></li>
-						<li><a href="trains.html">Trains</a></li>
-						<li><a href="weekend.html">Weekend Getaways</a></li>
-						<li><a href="deals.html">Deals</a></li>
+						<li class="active"><a href="Home.jsp">Flights</a></li>
+						<% if(user != null) { %>
+						<li><a href="MyOrder.jsp">My Orders</a></li>
+						<%}%>
 					</ul>
 					<div class="clearfix"></div>
 					<!-- script-for-menu -->
@@ -61,24 +62,27 @@
 						<!-- /script-for-menu -->
 				</div>
 				<div class="dropdown-grids">
-						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
-							<div id="loginBox">                
-								<form id="loginForm">
+				
+				<% if(user == null) { %>
+					<div id="loginContainer">
+						<a href="#" id="loginButton"><span>Login</span></a>
+							<div id="loginBox">
+								<form id="loginForm" action="Login" method="post">
 									<div class="login-grids">
 										<div class="login-grid-left">
 											<fieldset id="body">
 												<fieldset>
-													<label for="email">Username</label>
-													<input type="text" name="username" id="username">
+													<label for="username">User Name</label>
+													<input type="text" name="name" id="username">
 												</fieldset>
 												<fieldset>
 													<label for="password">Password</label>
 													<input type="password" name="password" id="password">
 												</fieldset>
-												<input type="submit" id="login" value="Sign in">
+												<input type="submit" id="login" value="Login">
 												<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
 											</fieldset>
-											<span><a href="#">Forgot your password?</a></span>
+											<span><a href='SignUp.jsp'>Forgot your password?</a></span>
 											<div class="or-grid">
 												<p>OR</p>
 											</div>
@@ -92,6 +96,11 @@
 								</form>
 							</div>
 						</div>
+					<%} else { %>
+						<div id="loginContainer">					
+							<a href="Logout.jsp" id="loginButton"><span>Logout</span></a>
+						</div>
+					<%}%>
 				</div>
 				<div class="clearfix"></div>
 			</div>

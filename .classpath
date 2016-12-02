@@ -6,9 +6,11 @@
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
 	<classpathentry kind="src" path="WEB-INF/classes"/>
-	<classpathentry kind="output" path="WEB-INF/classes"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="G:/Course/csp595/homework/bson-3.2.1.jar"/>
 	<classpathentry kind="lib" path="G:/Course/csp595/homework/mongodb-driver-core-3.2.1.jar"/>
 	<classpathentry kind="lib" path="G:/Course/csp595/homework/mongodb-driver-3.2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Course/csp595/595JavaWorkSpace/CSPProject/jars/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="G:/Course/csp595/homework/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>

@@ -14,13 +14,13 @@
 						</div>
 						<div class="book-left-form">
 							<form method="post" action="SignUp">
-								<p>Username</p>
-								<input type="text" name="username" value="">
+								<p>User Name</p>
+								<input type="text" name="name">
 								<p>Password</p>
-								<input type="password" name="password1" id="password">
+								<input type="password" name="password" id="password">
 								<p>Confirm Password</p>
-								<input type="password" name="password2" id="password">
-								<input type="submit" id="login" value="Register">
+								<input type="password" name="repassword" id="password">
+								<input type="submit" id="login" value="SignUp">
 							</form>
 						</div>
 					</div>

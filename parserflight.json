@@ -1,0 +1,114 @@
+[
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T08:00-06:00",
+    "price": "USD283.10",
+    "destination": "SFO",
+    "flightNumber": "VX201",
+    "arrivalTime": "2016-12-05T10:50-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T19:15-06:00",
+    "price": "USD283.10",
+    "destination": "SFO",
+    "flightNumber": "UA1742",
+    "arrivalTime": "2016-12-05T21:50-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T20:50-06:00",
+    "price": "USD283.10",
+    "destination": "SFO",
+    "flightNumber": "UA741",
+    "arrivalTime": "2016-12-05T23:33-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T20:55-06:00",
+    "price": "USD288.10",
+    "destination": "SFO",
+    "flightNumber": "F91249",
+    "arrivalTime": "2016-12-05T23:50-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T06:00-06:00",
+    "price": "USD98.10",
+    "destination": "LAX",
+    "flightNumber": "NK737",
+    "arrivalTime": "2016-12-05T08:29-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T16:35-06:00",
+    "price": "USD98.10",
+    "destination": "LAX",
+    "flightNumber": "NK731",
+    "arrivalTime": "2016-12-05T19:08-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T17:20-06:00",
+    "price": "USD153.10",
+    "destination": "LAX",
+    "flightNumber": "F91273",
+    "arrivalTime": "2016-12-05T20:04-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T09:15-06:00",
+    "price": "USD223.10",
+    "destination": "LAX",
+    "flightNumber": "VX231",
+    "arrivalTime": "2016-12-05T11:50-08:00"
+  },
+  {
+    "origin": "ORD",
+    "departureTime": "2016-12-05T18:10-06:00",
+    "price": "USD223.10",
+    "destination": "LAX",
+    "flightNumber": "VX241",
+    "arrivalTime": "2016-12-05T20:50-08:00"
+  },
+  {
+    "origin": "LAX",
+    "departureTime": "2016-12-06T22:49-08:00",
+    "price": "USD63.10",
+    "destination": "ORD",
+    "flightNumber": "F91272",
+    "arrivalTime": "2016-12-07T05:00-06:00"
+  },
+  {
+    "origin": "LAX",
+    "departureTime": "2016-12-06T09:45-08:00",
+    "price": "USD68.10",
+    "destination": "ORD",
+    "flightNumber": "NK730",
+    "arrivalTime": "2016-12-06T15:43-06:00"
+  },
+  {
+    "origin": "LAX",
+    "departureTime": "2016-12-06T17:48-08:00",
+    "price": "USD68.10",
+    "destination": "ORD",
+    "flightNumber": "NK736",
+    "arrivalTime": "2016-12-06T23:43-06:00"
+  },
+  {
+    "origin": "LAX",
+    "departureTime": "2016-12-06T17:25-08:00",
+    "price": "USD93.10",
+    "destination": "ORD",
+    "flightNumber": "VX236",
+    "arrivalTime": "2016-12-06T23:15-06:00"
+  },
+  {
+    "origin": "LAX",
+    "departureTime": "2016-12-06T11:15-08:00",
+    "price": "USD96.10",
+    "destination": "ORD",
+    "flightNumber": "VX232",
+    "arrivalTime": "2016-12-06T17:15-06:00"
+  }
+]
