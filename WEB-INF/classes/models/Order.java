@@ -77,7 +77,7 @@ public class Order implements java.io.Serializable {
 
 		// user can cancel this order only within 5 days after order has been placed
 		long diff = Math.abs(new Date().getTime() - this.date.getTime());
-		long diffDays = diff / (24 * 60 * 60 * 1000);
+		long diffDays = diff / (1 * 60 * 60 * 1000);
 		if (diffDays > 5)
 			return false;
 		else

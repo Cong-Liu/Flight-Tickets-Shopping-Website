@@ -18,14 +18,15 @@
 	String id = request.getParameter("cancel");
 	if (id != null) {
 		int idx = Integer.parseInt(id);
-		if (idx < 0 || idx >= list.size())
+		if (idx < 0)
 			throw new Exception("Illegal order index.");
 		if (!list.get(idx).cancel())
-			throw new Exception("Unable to cancel your order.");
+			throw new Exception("Your ticket is purchersed by one hour, unable to cancel your order.");
 		try {
-			MySQLDataStoreUtilities.deleteOrder(list.get(idx).getOrderNumber());
-
-			list.remove(idx);
+			
+			MySQLDataStoreUtilities.deleteOrder(idx);
+			Orders.GetInstance().delete(idx);
+			list=Orders.GetInstance().getList(user.getName());
 		} catch (Throwable e) {
 			throw new Exception("Cannot delect this order in database"+e.getMessage());
 		}
@@ -41,7 +42,7 @@
 			<td><%=order.getTotalPrice()%></td>
 			<td><%=order.getDate()%></td>
 			<td><%=order.getStatusString() %></td>
-			<td><a href='MyOrder.jsp?cancel=<%=i%>'>Cancel</a></td>
+			<td><a href='MyOrder.jsp?cancel=<%=order.getOrderNumber()%>'>Cancel</a></td>
 		</tr>
 		
 	<%}%>
