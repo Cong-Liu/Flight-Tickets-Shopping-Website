@@ -105,5 +105,9 @@ public class Flight {
 	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
+	
+	public String getShortC(){
+		return this.flightNumber.substring(0, 2).toUpperCase();
+	}
 
 }

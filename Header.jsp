@@ -113,6 +113,8 @@
 					%>
 					<div id="loginContainer">
 						<a href="MyOrder.jsp"><span>My Orders</span></a>
+						
+						<a href="Cart.jsp"><span>Shopping Cart</span></a>
 						<a href="Logout.jsp"><span>Logout</span></a>
 					</div>
 					<%

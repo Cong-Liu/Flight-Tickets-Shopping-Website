@@ -37,7 +37,7 @@
 								<div class="booking-form">
 									<div class="online_reservation">
 										<div class="b_room">
-											<form class="booking_room" action='List.jsp'>
+											<form class="booking_room" method="post" action='List.jsp'>
 												<div class="reservation">
 													<ul>
 														<li class="span1_of_1 desti">

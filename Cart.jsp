@@ -51,12 +51,12 @@
 			<td><%=list.get(i).getOrigin() %> - <%=list.get(i).getDestination() %></td>
 			
 			<td><%=list.get(i).getDate() %></td>
-			<td><%=list.get(i).getPrice() %></td>
+			<td><%=String.format("%.2f", list.get(i).getPrice()) %></td>
 			<td><a href='Cart.jsp?del=<%=i%>'>Delete</a></td></tr>
 		
 	<% total += list.get(i).getPrice();
 	}%>
-	<tr><td>Total Price: </td><td></td><td></td><td><%=total %><td></tr>
+	<tr><td>Total Price: </td><td></td><td></td><td><%=String.format("%.2f",total) %><td></tr>
 	<tr><td colspan='4'><a class ="send" href='Checkout.jsp'>Checkout</a></td></tr>
 	</table>
 </div>

@@ -20,10 +20,9 @@
 		int idx = Integer.parseInt(id);
 		if (idx < 0)
 			throw new Exception("Illegal order index.");
-		if (!list.get(idx).cancel())
-			throw new Exception("Your ticket is purchersed by one hour, unable to cancel your order.");
-		try {
-			
+		if(!Orders.GetInstance().findById(idx).cancel())
+			throw new Exception("Your ticket is purchersed by one day, unable to cancel your order.");
+		try {			
 			MySQLDataStoreUtilities.deleteOrder(idx);
 			Orders.GetInstance().delete(idx);
 			list=Orders.GetInstance().getList(user.getName());

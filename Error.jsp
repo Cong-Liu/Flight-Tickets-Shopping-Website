@@ -6,7 +6,6 @@
 		<div class='faqs-top-grids terms-grids'>
 			<div class="move-text">
 				<div class="marquee">
-					Error:
 					<%=exception.getMessage()%></div>
 			</div>
 		</div>

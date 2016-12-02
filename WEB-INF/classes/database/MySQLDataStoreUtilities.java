@@ -175,9 +175,11 @@ public class MySQLDataStoreUtilities {
 		return flist;
 	}
 	
-	public static List<Flight> getFlights(String or, String des, String d) throws Throwable {
+	public static List<Flight> getFlights(String or, String des, String d) {
 		List<Flight> flist = new ArrayList<Flight>();
-		getConnection();
+		try {
+			getConnection();
+		
 		String selectFlights = "SELECT * FROM bestflightdb.flights where origin=\'"+or
 				+"\' and destination = \'"+des+"\' and date = \'"+d+"\';";
 		ResultSet rs = null;
@@ -199,9 +201,39 @@ public class MySQLDataStoreUtilities {
 		rs.close();
 		st.close();
 		conn.close();
+		} catch (Throwable e) {
+			System.err.println("Canot find flights."+e.getMessage());
+		}
 		return flist;
 	}
-
+	
+//	public static List<Flight> getFlights(String carrier) throws Throwable {
+//		List<Flight> flist = new ArrayList<Flight>();
+//		getConnection();
+//		String selectFlights = "select * from flights;";
+//		ResultSet rs = null;
+//		Statement st = conn.createStatement();
+//		rs = st.executeQuery(selectFlights);
+//		while (rs.next()) {
+//			int id = rs.getInt(1);
+//			String ori = rs.getString(2);
+//			String dest = rs.getString(3);
+//			Date date = rs.getDate(4);
+//			double price = rs.getDouble(5);
+//			String arrT = rs.getString(6);
+//			String depT = rs.getString(7);
+//			String fnum = rs.getString(8);
+//			String carrier = rs.getString(9);
+//
+//			flist.add(new Flight(id, ori, dest, date, price, arrT, depT, fnum,carrier));
+//		}
+//		rs.close();
+//		st.close();
+//		conn.close();
+//		return flist;
+//	} 
+	
+	
 	private static Date parser2sqldate(java.util.Date d) {
 
 		java.sql.Date sqlDate = new java.sql.Date(d.getTime());

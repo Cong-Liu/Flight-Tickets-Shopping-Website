@@ -35,7 +35,7 @@
 
 					session.removeAttribute("cart");
 			%>
-			<h3>Your ticket has been placed!</h3>
+			<h3>Your order has been placed!</h3>
 			<h4>
 				Ticket status tracking number:
 				<%=orderNumber%></h4>

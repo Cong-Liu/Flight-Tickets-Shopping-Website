@@ -37,7 +37,7 @@ public class SignUp extends HttpServlet {
 		if(!Users.GetInstance().add(user))
 			throw new ServletException("Your username " + username + " is not available. Please choose another username.");
 		
-		request.setAttribute("message", "Sign Up Success! Please login.");
+		request.setAttribute("message", "<h6>Sign Up Success! Please login.</h6><script>setTimeout(function(){location.href='Home.jsp'}, 2000);</script>");
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Message.jsp");
 		dispatcher.forward(request, response);
 	}

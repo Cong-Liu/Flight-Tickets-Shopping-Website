@@ -134,63 +134,111 @@
 
 				</div>
 				<div class="col-md-9 product-right">
-					<%String m = request.getMethod();
-						if (request.getMethod().equals("GET")) {
+					<%session = request.getSession();
+						if (request.getMethod().equals("POST")) {
 							String or = request.getParameter("origin");
 							String des = request.getParameter("destination");
 							String d = request.getParameter("date");
-							try {
-								List<Flight> flist = MySQLDataStoreUtilities.getFlights(or, des, d);
-								if (flist.isEmpty()) {
-									request.setAttribute("message", "<h5>No flight founded! Please try again!</h5>");
-									RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Message.jsp");
-									dispatcher.forward(request, response);
-								} else {
+							List<Flight> flist = MySQLDataStoreUtilities.getFlights(or, des, d);
+								
+								if (flist.isEmpty())
+									throw new Exception(
+											"<h5>No flight founded! Please try again!</h5> <script>setTimeout(function(){location.href='Home.jsp'}, 2000);</script>");
+								else {
+									
+									session.setAttribute("flights", flist);
 									for (Flight f : flist) {
 										String deptime = f.getDepartureTime();
 										String arrtime = f.getArrivalTime();
 										String t = deptime + " - " + arrtime;
-										String addr = or + " - " + des;
-					%>
-					<div class="product-right-grids">
-						<div class="product-right-top">
-							<div class="p-left">
-								<div class="p-right-img">
-									<a href="#"
-										style="background-image: url('images/Airlines/<%=f.getFlightNumber().substring(0, 2)%>.jpg')"></a>
-								</div>
-							</div>
-							<div class="p-right">
-								<div class="col-md-6 p-right-left">
-									<a><%=f.getFlightNumber()%></a>
-									<p><%=f.getCarrier()%></p>
-									<p class="p-call"><%=t%></p>
-								</div>
-								<div class="col-md-6 p-right-right">
-									<h6>Rating : 4.1/5</h6>
-									<p><%=addr%></p>
-									<span class="p-offer">$<%=f.getPrice()%></span>
-									<p>
-										<a class="best-btn" href="Cart.jsp?add=<%=f.getId()%>">Select</a>
-									</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-					<%
-						}
+										String addr = or.toUpperCase() + " - " + des.toUpperCase();
+										%>
+											<div class="product-right-grids">
+												<div class="product-right-top">
+													<div class="p-left">
+														<div class="p-right-img">
+															<a href="#"
+																style="background-image: url('images/Airlines/<%=f.getFlightNumber().substring(0, 2)%>.jpg')"></a>
+														</div>
+													</div>
+													<div class="p-right">
+														<div class="col-md-6 p-right-left">
+															<a><%=f.getFlightNumber()%></a>
+															<p><%=f.getCarrier()%></p>
+															<p class="p-call"><%=t%></p>
+														</div>
+														<div class="col-md-6 p-right-right">
+															<h6>Rating : 4.1/5</h6>
+															<p><%=addr%></p>
+															<span class="p-offer"><strong>Price: $ <%=String.format("%.2f", f.getPrice()) %></strong></span>
+															<p>
+																<a class="best-btn" href="Cart.jsp?add=<%=f.getId()%>">Select</a>
+															</p>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+													<div class="clearfix"></div>
+												</div>
+											</div>
+											<%
+										}
+									}
+								
+							}else{
+								List<Flight> fc = (List<Flight>)session.getAttribute("flights");
+								List<Flight> t = fc;
+								String carr = request.getParameter("airline");
+								if (carr != null) {
+									for (Flight f : t) {
+										if (!f.getShortC().equalsIgnoreCase(carr))
+											t.remove(f);
+									}
+									if (t.isEmpty())
+										throw new Exception(
+												"<h5>No flight founded! Please try again!</h5> <script>setTimeout(function(){location.href='List.jsp'}, 2000);</script>");
+									else {
+										for (Flight f : t) {
+											String deptime = f.getDepartureTime();
+											String arrtime = f.getArrivalTime();
+											String time = deptime + " - " + arrtime;
+											String addr = f.getOrigin() + " - " + f.getDestination();
+											%>
+											<div class="product-right-grids">
+												<div class="product-right-top">
+													<div class="p-left">
+														<div class="p-right-img">
+															<a href="#"
+																style="background-image: url('images/Airlines/<%=f.getFlightNumber().substring(0, 2)%>.jpg')"></a>
+														</div>
+													</div>
+													<div class="p-right">
+														<div class="col-md-6 p-right-left">
+															<a><%=f.getFlightNumber()%></a>
+															<p><%=f.getCarrier()%></p>
+															<p class="p-call"><%=time%></p>
+														</div>
+														<div class="col-md-6 p-right-right">
+															<h6>Rating : 4.1/5</h6>
+															<p><%=addr%></p>
+															<span class="p-offer">$<%=f.getPrice()%></span>
+															<p>
+																<a class="best-btn" href="Cart.jsp?add=<%=f.getId()%>">Select</a>
+															</p>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+													<div class="clearfix"></div>
+												</div>
+											</div>
+											<%
+										}
+									}
 								}
-
-							} catch (Throwable e) {
-								throw new Exception("Cannot delect this order in database" + e.getMessage());
 							}
 
-						}
 					%>
 
-				<!-- 
+					<!-- 
 					<div class="product-right-grids">
 						<div class="product-right-top">
 							<div class="p-left">
