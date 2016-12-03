@@ -6,7 +6,11 @@
 		<div class='faqs-top-grids terms-grids'>
 			<div class="move-text">
 				<div class="marquee">
-					<%=exception.getMessage()%></div>
+					<%
+						if(exception.getCause() != null && !exception.getCause().getMessage().isEmpty()) out.println(exception.getCause().getMessage());
+						else out.println(exception.getMessage());
+					%>
+				</div>
 			</div>
 		</div>
 	</div>

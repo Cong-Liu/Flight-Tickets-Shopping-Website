@@ -1,5 +1,11 @@
 ﻿<%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ page import="models.*"%>
+<%
+	//get user from the session
+	request.getSession().setAttribute("time", new java.util.Date());
+	models.User user = (models.User) request.getSession().getAttribute("user");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,11 +41,7 @@
 <!--//pop-up-->
 </head>
 <body>
-	<%@ page import="models.*"%>
-	<%
-		// get user from the session
-		models.User user = (models.User) request.getSession().getAttribute("user");
-	%>
+	
 	<!--header-->
 	<div class="header">
 		<div class="container">

@@ -38,7 +38,7 @@
 		order = list.get(i);%>
 		<tr>
 			<td><%=order.getOrderNumber()%></td>
-			<td><%=order.getTotalPrice()%></td>
+			<td><%=String.format("%.2f", order.getTotalPrice())%></td>
 			<td><%=order.getDate()%></td>
 			<td><%=order.getStatusString() %></td>
 			<td><a href='MyOrder.jsp?cancel=<%=order.getOrderNumber()%>'>Cancel</a></td>
