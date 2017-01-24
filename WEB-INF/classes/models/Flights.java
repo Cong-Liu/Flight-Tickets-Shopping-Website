@@ -29,7 +29,7 @@ public class Flights {
 		try {
 			if (MySQLDataStoreUtilities.getFlights().isEmpty()) {
 				this.flightlists = readFile(JSON_FILE);
-
+				
 				for (Flight f : flightlists) {
 					MySQLDataStoreUtilities.insertFlight(f);
 				}

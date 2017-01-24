@@ -146,6 +146,7 @@
 						if (flist.isEmpty()) throw new ServletException("<h5>No flight founded! Please search again!</h5><script>setTimeout(function(){location.href='Home.jsp'}, 2000);</script>");
 					}
 					else {
+						
 						List<Flight> list = (List<Flight>)request.getSession().getAttribute("flights");
 						if(list == null || list.isEmpty()) throw new ServletException("<h5>Please search flight first.</h5><script>setTimeout(function(){location.href='Home.jsp'}, 2000);</script>");
 						
